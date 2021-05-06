@@ -58,9 +58,7 @@ class ZarejestrowaneFirmy {
 	}
 
 	private boolean czyMoznaDodacFirme() {
-		if (firmy.length + 1 > limitFirm)
-			return false;
-		return true;
+		return firmy.length+1 > limitFirm;
 	}
 
 	private void dodajFirme(Firma firma) {
