@@ -72,9 +72,7 @@ public class Main {
 	}
 
 	public static boolean sprawdzCzyPoprawnyKodPocztowy(String kod) {
-		if (kod.length() != 6 || kod.charAt(2) != '-')
-			return false;
-		return true;
+		return kod.length() == 6 && kod.charAt(2) == '-';
 	}
 
 }
