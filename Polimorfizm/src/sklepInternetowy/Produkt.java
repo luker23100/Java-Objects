@@ -90,7 +90,7 @@ class Adres {
 	
 	@Override
 	public String toString() {
-		return "Adres: " + "\n" + " Numer domu: " + nrDomu + "\n" + " Numer mieszkania: " + nrMieszkania + " Miejscowosc: " + miejscowosc
+		return "Adres: " + "\n" + " Numer domu: " + nrDomu + "\n" + " Numer mieszkania: " + nrMieszkania + "\n Miejscowosc: " + miejscowosc
 				+ "\n" + " Kod Pocztowy: " + kodPocztowy + "\n" + " Ulica: " + ulica;
 	}
 }
@@ -103,11 +103,9 @@ class Producent extends Adres{
 	public Producent() {
 		System.out.print("Podaj Nip: ");
 		nip = skaner.nextLine();
-		System.out.print("Podaj nazwe: ");
+		System.out.print("Podaj nazwe producenta: ");
 		nazwa = skaner.nextLine();
 		
-		adres = new Adres();
-		skaner.close();
 	}
 	
 	@Override
@@ -127,8 +125,7 @@ class Autor extends Adres{
 		System.out.print("Podaj nazwisko: ");
 		nazwisko = skaner.nextLine();
 		
-		adres = new Adres();
-		skaner.close();
+		//adres = new Adres();
 	}
 	
 	@Override
@@ -142,7 +139,7 @@ class Ksiazka extends Produkt {
 
 	public Ksiazka(String nazwa, double cena, int ilosc) {
 		super(nazwa, cena, ilosc);
-		this.autor = new Autor();
+		autor = new Autor();
 	}
 	
 	@Override
@@ -156,7 +153,7 @@ class Buty extends Produkt {
 
 	public Buty(String nazwa, double cena, int ilosc) {
 		super(nazwa, cena, ilosc);
-		this.producent = new Producent();
+		producent = new Producent();
 	}
 	
 	@Override
